@@ -1,4 +1,4 @@
-package com.levelup.backend.entity;
+package com.skillmind.backend.entity;
 
 import java.util.Set;
 
