@@ -1,4 +1,4 @@
-package com.levelup.backend.config;
+package com.skillmind.backend.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

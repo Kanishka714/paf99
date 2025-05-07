@@ -1,4 +1,4 @@
-package com.levelup.backend.config;
+package com.skillmind.backend.config;
 
 // import com.skillshare.backend.config.JwtUtil;
 import java.io.IOException;
@@ -9,9 +9,9 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
-import com.levelup.backend.entity.Role;
-import com.levelup.backend.entity.User;
-import com.levelup.backend.repository.UserRepository;
+import com.skillmind.backend.entity.Role;
+import com.skillmind.backend.entity.User;
+import com.skillmind.backend.repository.UserRepository;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
