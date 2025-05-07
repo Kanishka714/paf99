@@ -1,4 +1,4 @@
-package com.levelup.backend.controller;
+package com.skillmind.backend.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,14 +25,15 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.levelup.backend.entity.Role;
-import com.levelup.backend.entity.User;
-import com.levelup.backend.repository.FollowRepository;
-import com.levelup.backend.repository.LearningPlanRepository;
-import com.levelup.backend.repository.NotificationRepository;
-import com.levelup.backend.repository.PostRepository;
-import com.levelup.backend.repository.StatusRepository;
-import com.levelup.backend.service.UserService;
+import com.skillmind.backend.entity.Role;
+import com.skillmind.backend.entity.User;
+import com.skillmind.backend.repository.FollowRepository;
+import com.skillmind.backend.repository.LearningPlanRepository;
+import com.skillmind.backend.repository.NotificationRepository;
+import com.skillmind.backend.repository.PostRepository;
+import com.skillmind.backend.repository.StatusRepository;
+import com.skillmind.backend.service.UserService;
+
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -43,9 +44,9 @@ public class AuthController {
     @Autowired
     private UserService userService;
     @Autowired
-    private com.levelup.backend.config.JwtUtil jwtUtil;
+    private com.skillmind.backend.config.JwtUtil jwtUtil;
     @Autowired
-    private com.levelup.backend.repository.UserRepository userRepository;
+    private com.skillmind.backend.repository.UserRepository userRepository;
     @Value("${file.upload-dir}")
     private String uploadDir;
     @Autowired

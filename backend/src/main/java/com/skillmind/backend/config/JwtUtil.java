@@ -1,4 +1,4 @@
-package com.levelup.backend.config;
+package com.skillmind.backend.config;
 
 import java.security.Key;
 import java.util.Date;

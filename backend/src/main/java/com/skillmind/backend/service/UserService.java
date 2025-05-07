@@ -7,10 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.levelup.backend.config.JwtUtil;
-import com.levelup.backend.entity.Role;
-import com.levelup.backend.entity.User;
-import com.levelup.backend.repository.UserRepository;
+import com.skillmind.backend.config.JwtUtil;
+import com.skillmind.backend.entity.Role;
+import com.skillmind.backend.entity.User;
+import com.skillmind.backend.repository.UserRepository;
+
 
 @Service
 public class UserService {
