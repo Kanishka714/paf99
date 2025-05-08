@@ -1,4 +1,4 @@
-package com.levelup.backend.config;
+package com.skillmind.backend.config;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.levelup.backend.entity.User;
-import com.levelup.backend.repository.UserRepository;
+import com.skillmind.backend.entity.User;
+import com.skillmind.backend.repository.UserRepository;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

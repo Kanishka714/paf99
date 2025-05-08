@@ -1,4 +1,4 @@
-package com.levelup.backend.config;
+package com.skillmind.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
