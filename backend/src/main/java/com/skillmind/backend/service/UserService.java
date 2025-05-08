@@ -1,4 +1,4 @@
-package com.levelup.backend.service;
+package com.skillmind.backend.service;
 
 import java.util.Collections;
 import java.util.Optional;
