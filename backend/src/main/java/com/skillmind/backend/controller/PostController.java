@@ -86,23 +86,27 @@ public class PostController {
         return ResponseEntity.ok(postService.save(post));
     }
 
+    // Get all posts by the authenticated user
     @GetMapping("/my")
     public List<Post> myPosts(Principal principal) {
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
         return postService.getPostsByUser(user);
     }
 
+    // Get all posts by all users
     @GetMapping("/all")
     public List<Post> getAllPosts() {
         return postService.getAllPosts();
     }
 
+    // Get all posts by a specific user
     @GetMapping("/{id}")
     public ResponseEntity<Post> getPostById(@PathVariable Long id, Principal principal) {
         Post post = postService.getPostByIdForUser(id, principal.getName());
         return ResponseEntity.ok(post);
     }
 
+    // Get all posts by a specific user
     @PutMapping(value = "/{id}", consumes = {"multipart/form-data"})
     public ResponseEntity<Post> updatePostWithMedia(@PathVariable Long id,
             @RequestPart("title") String title,
@@ -127,6 +131,8 @@ public class PostController {
         return ResponseEntity.ok(updatedPost);
     }
 
+
+// Update post without media
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deletePost(@PathVariable Long id, Principal principal) {
         postService.deletePostByIdAndUser(id, principal.getName());
