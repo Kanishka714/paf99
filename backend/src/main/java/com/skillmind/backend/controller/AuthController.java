@@ -1,6 +1,5 @@
 package com.skillmind.backend.controller;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -34,7 +33,6 @@ import com.skillmind.backend.repository.NotificationRepository;
 import com.skillmind.backend.repository.PostRepository;
 import com.skillmind.backend.repository.StatusRepository;
 import com.skillmind.backend.service.UserService;
-
 
 import jakarta.servlet.http.HttpServletRequest;
 
