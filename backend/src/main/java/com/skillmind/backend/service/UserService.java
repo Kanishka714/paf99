@@ -12,7 +12,6 @@ import com.skillmind.backend.entity.Role;
 import com.skillmind.backend.entity.User;
 import com.skillmind.backend.repository.UserRepository;
 
-
 @Service
 public class UserService {
 

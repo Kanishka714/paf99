@@ -1,4 +1,5 @@
 package com.skillmind.backend.controller;
+package com.skillmind.backend.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,6 +35,14 @@ import com.skillmind.backend.repository.PostRepository;
 import com.skillmind.backend.repository.StatusRepository;
 import com.skillmind.backend.service.UserService;
 
+import com.skillmind.backend.entity.User;
+import com.skillmind.backend.repository.FollowRepository;
+import com.skillmind.backend.repository.LearningPlanRepository;
+import com.skillmind.backend.repository.NotificationRepository;
+import com.skillmind.backend.repository.PostRepository;
+import com.skillmind.backend.repository.StatusRepository;
+import com.skillmind.backend.service.UserService;
+
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -45,7 +54,9 @@ public class AuthController {
     private UserService userService;
     @Autowired
     private com.skillmind.backend.config.JwtUtil jwtUtil;
+    private com.skillmind.backend.config.JwtUtil jwtUtil;
     @Autowired
+    private com.skillmind.backend.repository.UserRepository userRepository;
     private com.skillmind.backend.repository.UserRepository userRepository;
     @Value("${file.upload-dir}")
     private String uploadDir;
