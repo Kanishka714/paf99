@@ -44,7 +44,11 @@ public class AuthController {
     private UserService userService;
     @Autowired
     private com.skillmind.backend.config.JwtUtil jwtUtil;
+    private com.skillmind.backend.config.JwtUtil jwtUtil;
+    private com.skillmind.backend.config.JwtUtil jwtUtil;
     @Autowired
+    private com.skillmind.backend.repository.UserRepository userRepository;
+    private com.skillmind.backend.repository.UserRepository userRepository;
     private com.skillmind.backend.repository.UserRepository userRepository;
     @Value("${file.upload-dir}")
     private String uploadDir;
