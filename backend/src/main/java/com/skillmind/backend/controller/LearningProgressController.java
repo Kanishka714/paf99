@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.util.List;
 
+// This controller handles CRUD operations for LearningProgress entities.
 @RestController
 @RequestMapping("/api/learning-progresses")
 public class LearningProgressController {
@@ -29,17 +30,20 @@ public class LearningProgressController {
         return progressService.save(progress);
     }
 
+    // This endpoint retrieves a specific LearningProgress by its ID.
     @GetMapping("/my")
     public List<LearningProgress> myProgresses(Principal principal) {
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
         return progressService.getProgressesByUser(user);
     }
 
+    // This endpoint retrieves a specific LearningProgress by its ID.
     @GetMapping("/all")
     public List<LearningProgressResponse> getAllProgresses() {
         return progressService.getAllProgressesAsResponse();
     }
 
+    // This endpoint retrieves a specific LearningProgress by its ID.
     @DeleteMapping("/{id}")
     public void deleteProgress(@PathVariable Long id, Principal principal) {
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
