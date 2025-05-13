@@ -37,6 +37,7 @@ public class CommentController {
     @Autowired
     private PostRepository postRepository;
 
+    // --- Constructors ---
     @PostMapping("/{postId}")
     public Comment addComment(@PathVariable Long postId, @RequestBody Comment comment, Principal principal) {
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
@@ -52,6 +53,7 @@ public class CommentController {
         return commentService.getCommentsByPost(post);
     }
 
+    //modify comment
     @PutMapping("/{commentId}")
     public ResponseEntity<Comment> updateComment(@PathVariable Long commentId, @RequestBody Map<String, String> request, Principal principal) {
         Comment comment = commentService.getCommentById(commentId);
