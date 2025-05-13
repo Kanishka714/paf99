@@ -36,17 +36,18 @@ public class LearningPlanController {
         return planService.save(plan);
     }
 
+    // Get all plans
     @GetMapping("/my")
     public List<LearningPlan> myPlans(Principal principal) {
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
         return planService.getPlansByUser(user);
     }
 
-    @GetMapping("/all")
     public List<LearningPlanResponse> getAllPlans() {
         return planService.getAllPlansAsResponse();
     }
 
+    // Get a specific plan by ID
     @DeleteMapping("/{id}")
     public void deletePlan(@PathVariable Long id, Principal principal) {
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();

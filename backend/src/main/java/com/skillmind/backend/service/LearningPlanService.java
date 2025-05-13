@@ -10,6 +10,7 @@ import com.skillmind.backend.entity.LearningPlanResponse;
 import com.skillmind.backend.entity.User;
 import com.skillmind.backend.repository.LearningPlanRepository;
 
+// This service class handles the business logic for learning plans.
 
 @Service
 public class LearningPlanService {
